@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <link href="https://fonts.googleapis.com/css?family=DM+Serif+Display&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="/css/main.css">
+        <link rel="stylesheet" href="/css/contact.css">
+        <script src="/css/script/script.js"></script>
+        <title>Document</title>
+</head>
+<body>
+        <header>
+      
+                <a href="index.html"> Home</a>
+                <a href="gallery.html">Gallery</a>
+                <a href="contact.html"> contact</a>
+                <a href="entertainment.html"> entertainment</a>           
+            </header>
+            <main>
+                
+                
+                       <h2>Login Form</h2>
+        
+                        <form action="/action_page.php">
+                          <div class="imgcontainer">
+                            <img src="/image/1.PNG" alt="Avatar" class="avatar">
+                          </div>
+                        
+                          <div class="container">
+                            <label for="uname"><b>Username</b></label>
+                            <input type="text" placeholder="Enter Username" name="uname" required>
+                        
+                            <label for="psw"><b>Password</b></label>
+                            <input  style="width: 100%;
+                            padding: 12px 20px;
+                            margin: 8px 0;
+                            display: inline-block;
+                            border: 1px solid #ccc;
+                            box-sizing: border-box;background-color: ivory;color:black"type="password" placeholder="Enter Password" name="psw" required>
+                                
+                            <button type="submit">Login</button>
+                            <label>
+                              <input type="checkbox" checked="checked" name="remember"> Remember me
+                            </label>
+                            
+                          </div>
+                        
+                          <div class="container" style="background-color:#f1f1f1">
+                            <button style="background-color: red" type="button" class="cancelbtn">Cancel</button>
+                            
+                       
+                                    <button class =up onclick="document.getElementById('id01').style.display='block'">Sign Up</button>
+                          
+                            <span class="psw">Forgot <a href="#">password?</a></span>
+                          </div>
+                        </form>
+                      
+
+
+                <div class="modal" id="id01" style="text-align: center; ">
+                        <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+                <form style="background-color: black; color:white"  action="/action_page.php">
+                    <h2>sign up</h2>
+                    <p>Please fill up the following form</p>
+<input type="email" placeholder="email"   required ><br>
+<input type="password" placeholder="password"   required ><br>
+<input type="password" placeholder="confirm password"   required ><br>
+<label>
+        <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> Remember me
+      </label>
+<p style="color:white">by creating account you are agreeing to our <a href="#">Terms and Service</a></p>
+<button type="submit">submit</button>
+<div class="clearfix">
+        <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+                </form>  
+                </div>  
+                
+              
+
+            </main>
+            <footer>
+                    <p>@copyright <b>Tsering Yangchen</b></p>
+                        </footer>
+                        <script>
+                             var modal=document.getElementsByClassName('modal');
+                             window.onclick=function(event)
+{
+    if(event.target==modal){
+        modal.style.display="none";
+    }
+}                       
+
+</script>
+    <style>
+    .modal{
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 15%;
+  top: 5%;
+  width: 50%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  padding-top: 50px;
+}
+ 
+/* The Close Button (x) */
+.close {
+  position: absolute;
+  right: 35px;
+  top: 15px;
+  font-size: 40px;
+  font-weight: bold;
+  color: #f1f1f1;
+}
+
+.close:hover,
+.close:focus {
+  color: #f44336;
+  cursor: pointer;
+}
+
+/* Clear floats */
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+form {border: 3px solid #f1f1f1;}
+
+    input[type=text] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+
+
+.imgcontainer {
+  text-align: center;
+  margin: 24px 0 12px 0;
+}
+
+img.avatar {
+  width: 40%;
+  border-radius: 50%;
+}
+
+.container {
+  padding: 16px;
+}
+
+span.psw {
+  float: right;
+  padding-top: 16px;
+}
+
+/* Change styles for span and cancel button on extra small screens */
+@media screen and (max-width: 300px) {
+  span.psw {
+     display: block;
+     float: none;
+  }
+  .cancelbtn {
+     width: 100%;
+  }
+}
+
+</style>
+</body>
+</html>

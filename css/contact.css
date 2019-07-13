@@ -1,0 +1,31 @@
+.contact{
+    text-align: center;
+    
+}
+.up, .in, button{
+    background-color:green;
+    padding: 10px;
+    color:white;
+    border:none;
+    font-size: 16px;
+    margin:20px;
+    border-radius: 5%;
+}
+.up:hover, .in:hover{
+    color:black;
+    background-color:black;
+
+}
+input[type=email],[type=password]{
+    font-size: 23px;
+    margin:2%;
+    background-color: black;
+    color:white;
+    border:none;
+    
+}
+input::-webkit-input-placeholder {
+	color: white;
+	font-weight: normal;
+	border-bottom: 2px solid white;
+}

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <link href="https://fonts.googleapis.com/css?family=DM+Serif+Display&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="/css/main.css">
+        <link rel="stylesheet" href="/css/gallery.css">
+        <script src="/css/script/script.js"></script>
+        <title>Document</title>
+</head>
+<body>
+        <header>
+      
+            <a href="index.html"> Home</a>
+            <a href="gallery.html">Gallery</a>
+            <a href="contact.html"> contact</a>
+            <a href="entertainment.html"> entertainment</a>            
+            </header>
+           
+           
+            
+            <!-- Header -->
+            <div  id="button">
+              
+              <p>Click on the buttons to change the grid view.</p>
+              <button class="btn" onclick="one()">1</button>
+              <button class="btn active" onclick="two()">2</button>
+              <button class="btn" onclick="three()">3</button>
+            </div>
+            
+            <!-- Photo Grid -->
+            <row> 
+              <div class="column">
+                <img src="/image/1.PNG" style="width:100%">
+                <img src="/image/2 (2).jpg"  style="width:100%">
+                <img src="/image/2.PNG"  style="width:100%">
+               <img src="/image/7.PNG"  style="width:100%">
+              </div>
+              <div class="column">
+                    <img src="/image/5.PNG" style="width:100%">
+                    <img src="/image/6.PNG"  style="width:100%">
+                    <img src="/image/7.PNG"  style="width:100%">
+                    <img src="/image/6.PNG"  style="width:100%">
+              </div>  
+              <div class="column">
+                    <img src="/image/1.PNG" style="width:100%">
+                    <img src="/image/2.PNG"  style="width:100%">
+                    <img src="/image/3.PNG"  style="width:100%">
+                    <img src="/image/2 (1).jpg"  style="width:100%">
+                   
+              </div>
+            
+            </row>
+            <footer>
+ <p>	&copy <b>Tsering Yangchen</b></p>
+</footer>
+
+<script>
+        // Get the elements with class="column"
+        var elements = document.getElementsByClassName("column");
+        
+        // Declare a loop variable
+        var i;
+        
+        // Full-width images
+        function one() {
+            for (i = 0; i < elements.length; i++) {
+            elements[i].style.msFlex = "80%";  // IE10
+            elements[i].style.flex = "80%";
+          }
+        }
+        
+        // Two images side by side
+        function two() {
+          for (i = 0; i < elements.length; i++) {
+            elements[i].style.msFlex = "50%";  // IE10
+            elements[i].style.flex = "50%";
+          }
+        }
+        
+        // Four images side by side
+        function three() {
+          for (i = 0; i < elements.length; i++) {
+            elements[i].style.msFlex = "25%";  // IE10
+            elements[i].style.flex = "25%";
+          }
+        }
+        
+        // Add active class to the current button (highlight it)
+        var header = document.getElementById("button");
+        var btns = header.getElementsByClassName("btn");
+        for (var i = 0; i < btns.length; i++) {
+          btns[i].addEventListener("click", function() {
+            var current = document.getElementsByClassName("active");
+            current[0].className = current[0].className.replace(" active", "");
+            this.className += " active";
+          });
+        }
+        </script>
+
+        
+    
+</body>
+</html>

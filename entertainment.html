@@ -1,0 +1,78 @@
+<!DOCTYPE html></main>
+<html lang="en">
+<head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <link href="https://fonts.googleapis.com/css?family=DM+Serif+Display&display=swap" rel="stylesheet">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <link rel="stylesheet" href="/css/main.css">
+        <link rel="stylesheet" href="/css/contact.css">
+        <script src="/css/script/script.js"></script>
+        <script src="/css/script/jquery.js"></script>
+        <title>Document</title>
+</head>
+
+<body>
+        <header>
+      
+                <a href="index.html"> Home</a>
+                <a href="gallery.html">Gallery</a>
+                <a href="contact.html"> contact</a>
+                <a href="entertainment.html"> entertainment</a>           
+            </header>
+            
+                <div style="text-align: center">
+                    <h2>Hover your mouse here to see image</h2>
+                    <button class="button" data-panelid="panel1">click</button>
+                    <button class="button" data-panelid="panel2" >plick</button>
+                    <button class="button" data-panelid="panel3" >cick</button>
+                    <button class="button" data-panelid="panel4" >rick</button>
+                </div>
+                <row style=" display: grid;
+  align-content: space-evenly;
+  grid-template-columns: auto auto auto auto;">
+                
+                        <div id="panel1" class="panel panel-primary">
+                           <img src="image/1.png">
+                        </div>
+                   
+                   
+                            <div id="panel2" class="panel panel-primary">
+                                    <img src="image/3.png">
+                            </div>
+                     
+                        
+                                <div id="panel3" class="panel panel-primary">
+                                        <img src="image/2.png">   
+                                </div>
+                           
+                
+                    <div id="panel4" class="panel panel-primary">
+                            <img src="image/4.png">
+                    </div>
+                
+            </row>
+                    <footer>
+                    <p>	&copy <b>Tsering Yangchen</b></p>
+                       </footer>
+                       <style>
+                       
+                        #panel1,  #panel2, #panel3, #panel4{
+                            display: none;
+                            width:25%;
+                         
+                        } 
+                       </style>
+                       <script>
+                           $(function()
+                           {
+                              $(".button").on('mouseover',function(){
+                                  var panelId=$(this).attr('data-panelid');
+                                  $('#'+panelId).toggle();
+                                
+                              });
+                           });
+                       </script>
+                 </body>
+                           </html>
